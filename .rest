@@ -1,0 +1,19 @@
+// Local
+GET http://localhost:8080/
+###
+GET http://localhost:8080/recipes
+###
+GET http://localhost:8080/recipes/67a6d8a09a5ee09d7902a67c
+###
+GET http://localhost:8080/users/
+###
+GET http://localhost:8080/users/67a6d8a09a5ee09d7902a66a
+// Render
+###
+https://cse341-recipes.onrender.com/recipes
+###
+https://cse341-recipes.onrender.com/recipes/67a6d8a09a5ee09d7902a67c
+###
+GET https://cse341-recipes.onrender.com/users/
+###
+GET https://cse341-recipes.onrender.com/users/67a6d8a09a5ee09d7902a66b
