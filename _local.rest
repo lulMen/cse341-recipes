@@ -1,0 +1,11 @@
+// Local
+GET http://localhost:8080/
+###
+GET http://localhost:8080/recipes
+###
+GET http://localhost:8080/recipes/67a6d8a09a5ee09d7902a67c
+###
+GET http://localhost:8080/users/
+###
+GET http://localhost:8080/users/67a6d8a09a5ee09d7902a66a
+// Render
