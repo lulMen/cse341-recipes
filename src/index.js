@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 
 app
+    .use(cors())
     .use(express.json())
     .use(express.urlencoded({ extended: true }))
     .use('/', routerIndex)
