@@ -5,9 +5,9 @@
     "description": "Description",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "https://cse341-recipes.onrender.com",
   "basePath": "/",
-  "schemes": "http",
+  "schemes": "https",
   "paths": {
     "/": {
       "get": {
