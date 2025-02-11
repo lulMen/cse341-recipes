@@ -7,7 +7,9 @@
   },
   "host": "cse341-recipes.onrender.com",
   "basePath": "/",
-  "schemes": "https",
+  "schemes": [
+    "https"
+  ],
   "paths": {
     "/": {
       "get": {
@@ -35,7 +37,35 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Create a new recipe",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "ingredients": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "instructions": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "ingredients"
+              ]
+            }
+          }
+        ],
         "responses": {
           "201": {
             "description": "Created"
@@ -80,11 +110,33 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "ingredients": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "instructions": {
+                  "type": "string"
+                }
+              }
+            }
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "201": {
+            "description": "Created"
           },
           "400": {
             "description": "Bad Request"
@@ -133,7 +185,33 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Create a new user",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "username",
+                "email",
+                "password"
+              ]
+            }
+          }
+        ],
         "responses": {
           "201": {
             "description": "Created"
@@ -178,11 +256,30 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                }
+              }
+            }
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "201": {
+            "description": "Created"
           },
           "400": {
             "description": "Bad Request"
