@@ -59,7 +59,7 @@ const updateRecipe = async (req, res) => {
             return res.status(404).json({ message: 'Recipe not found' });
         }
 
-        res.status(204).json(updatedRecipe);
+        res.status(201).json(updatedRecipe);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
